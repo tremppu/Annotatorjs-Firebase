@@ -119,8 +119,8 @@
 <script>
 let firebase = "project-id-here"
 let auth = "secret-here"
-let currentHost = window.location.host
-let path = (window.location.pathname).split('/').join("_")
+let currentHost = (window.location.host).split('.').join("_")
+let path = (window.location.pathname).split('/').join("-")
 $('#content').annotator()
   .annotator('addPlugin', 'Store', {
     // The endpoint of the store on your server.
