@@ -118,18 +118,18 @@
 
 <script>
 let firebase = "project-id-here"
-let auth = "secret-here"
-let currentHost = (window.location.host).split('.').join("_")
+let key = "secret-here"
+let currentHost = (window.location.host).split('.').join("-")
 let path = (window.location.pathname).split('/').join("-")
 $('#content').annotator()
   .annotator('addPlugin', 'Store', {
     // The endpoint of the store on your server.
     prefix: 'https://'+firebase+'.firebaseio.com/annotations/' + currentHost +'/'+ path,
     urls: {
-      create: '/:id.json?' + auth,
-      update: '/:id.json?' + auth,
-      destroy: '/:id.json?' + auth,
-      search: '.json?' + auth
+      create: '/:id.json?auth=' + key,
+      update: '/:id.json?auth=' + key,
+      destroy: '/:id.json?auth=' + key,
+      search: '.json?auth=' + key
     },
     loadFromSearch: {
       // Todo
