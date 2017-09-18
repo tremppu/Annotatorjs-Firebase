@@ -45,6 +45,27 @@
         right: 1em;
         width: 20em;
       }
+      #annAllOpen{
+        position: fixed; top: 20px; right: 20px;
+        padding: 10px 20px;
+        background: rgba(255,214,71,.5);
+        font-size: 0.8em;
+        max-width: 20vw;
+        border-radius: 3px;
+        font-weight: bold;
+        color: #111;
+      }
+      #annAll{
+        position: fixed; top: 20px; right: 20px;
+        padding: 10px 50px 10px 20px;
+        background: rgb(255,214,71);
+        font-size: 1em;
+        max-width: 20vw;
+        border-radius: 3px;
+        font-weight: bold;
+        color: #111;
+        display: none;
+      }
     </style>
   </head>
 
@@ -121,6 +142,9 @@ let firebase = "project-id-here"
 let key = "secret-here"
 let currentHost = (window.location.host).split('.').join("-")
 let path = (window.location.pathname).split('/').join("-")
+// Custom
+let d = new Date();
+let n = d.toLocaleString();
 $('#content').annotator()
   .annotator('addPlugin', 'Store', {
     // The endpoint of the store on your server.
@@ -131,6 +155,9 @@ $('#content').annotator()
       destroy: '/:id.json?auth=' + key,
       search: '.json?auth=' + key
     },
+      annotationData: {
+        'pvm': n
+      },
     loadFromSearch: {
       // Todo
     }
