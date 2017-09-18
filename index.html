@@ -66,6 +66,16 @@
         color: #111;
         display: none;
       }
+      #textViewPre{
+        margin-top: 35px;
+      }
+      #nameP{
+        margin-top: 10px;
+        font-size: 0.8em;
+        padding: 5px 10px;
+        border-top: 1px solid #dadada;
+        opacity: 0.7;
+      }
     </style>
   </head>
 
@@ -142,9 +152,7 @@ let firebase = "project-id-here"
 let key = "secret-here"
 let currentHost = (window.location.host).split('.').join("-")
 let path = (window.location.pathname).split('/').join("-")
-// Custom
-let d = new Date();
-let n = d.toLocaleString();
+
 $('#content').annotator()
   .annotator('addPlugin', 'Store', {
     // The endpoint of the store on your server.
@@ -155,9 +163,6 @@ $('#content').annotator()
       destroy: '/:id.json?auth=' + key,
       search: '.json?auth=' + key
     },
-      annotationData: {
-        'pvm': n
-      },
     loadFromSearch: {
       // Todo
     }
