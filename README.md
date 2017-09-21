@@ -3,8 +3,8 @@ Based on Annotatorjs - http://annotatorjs.org/
 
 ## Installation & Usage
 
-First off all create an Google account.
-Signup to https://firebase.google.com/
+First off all create an Google account. <br/>
+Signup to https://firebase.google.com/ <br/>
 Get your id and auth-token
 
 > You'll need jquery and css first. 
