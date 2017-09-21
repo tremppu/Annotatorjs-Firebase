@@ -2,13 +2,18 @@
 Based on Annotatorjs - http://annotatorjs.org/
 
 ## Installation & Usage
+
+First off all create an Google account.
+Signup to https://firebase.google.com/
+Get your id and auth-token
+
 > You'll need jquery and css first. 
-> Add this before </head> 
+> Add this inside the head tag
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <link rel="stylesheet" href="YOUR-PATH/annotator.min.css">
 ```
-> Next add this before </body>
+> Next add this inside the body tag
 ```html
 <script src="YOUR-PATH/annotator-full.min.js"></script>
 
