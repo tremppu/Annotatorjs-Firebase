@@ -1368,3 +1368,39 @@
 .annotator-hl-filtered {
 	background-color: transparent
 }
+#annAllOpen{
+	position: fixed; top: 20px; right: 20px;
+	padding: 10px 20px;
+	background: rgba(255,214,71,.5);
+	font-size: 0.8em;
+	max-width: 20vw;
+	border-radius: 3px;
+	font-weight: bold;
+	color: #111;
+}
+#annAll{
+	position: fixed; top: 20px; right: 20px;
+	padding: 10px 50px 10px 20px;
+	background: rgb(255,214,71);
+	font-size: 1em;
+	max-width: 20vw;
+	border-radius: 3px;
+	font-weight: bold;
+	color: #111;
+	display: none;
+	max-height: 90vh;
+	overflow-y: auto;
+}
+#textViewPre{
+	margin-top: 35px;
+	white-space: pre-wrap;
+	max-height: 15vh;
+	overflow-y: auto;
+}
+#nameP{
+	margin-top: 10px;
+	font-size: 0.8em;
+	padding: 5px 10px;
+	border-top: 1px solid #dadada;
+	opacity: 0.7;
+}
